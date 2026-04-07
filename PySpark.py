@@ -1,3 +1,5 @@
+# 1) Write a pyspark code to get the average salary for all the employees for all years.
+
 from pyspark.sql.functions import avg, year
 
 salary_avg = (
@@ -14,3 +16,5 @@ final_df = (
 )
 
 final_df.show()
+
+##########################################################################################################################################################
