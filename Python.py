@@ -21,4 +21,25 @@ def find_song_pair(song_runtime_list):
 print(find_song_pair(Song_runtime_list))
 
 ##############################################################################################################################################################
-# 2) 
+# 2)  Find the most occurrence element from the list and return a dict with that element as key and no. of occurrence as value
+# input = ['a', 'b', 'c', 'd', 'c']
+# output = {'c': 2}
+
+input = ['a', 'b', 'c', 'd', 'c']
+d = {}
+
+for item in input:
+    if item in d:
+        d[item] += 1
+    else:
+        d[item] = 1
+        
+cnt = 0
+elem = None
+
+for key, value in d.items():
+    if value > cnt:
+        cnt = value
+        elem = key
+
+print({elem: cnt})
